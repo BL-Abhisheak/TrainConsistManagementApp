@@ -3,11 +3,29 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * UC8: Filter Passenger Bogies Using Streams
- * -----------------------------------------
- * This use case filters passenger bogies based on seating capacity
- * using Java Stream API.
+ * =========================================================
+ * MAIN CLASS – UseCase8TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 8: Filter Passenger Bogies Using Streams
+ *
+ * Description:
+ * This class filters passenger bogies based on seating
+ * capacity using Java Stream API.
+ *
+ * At this stage, the application:
+ * - Creates a list of bogies
+ * - Converts list into stream
+ * - Applies filter condition
+ * - Collects filtered result
+ * - Displays qualifying bogies
+ *
+ * This maps functional filtering using Streams.
+ *
+ * @author Developer
+ * @version 8.0
  */
+
 public class UseCase8TrainConsistMgmnt {
 
     // Reusing Bogie model from UC7
@@ -42,8 +60,11 @@ public class UseCase8TrainConsistMgmnt {
         }
 
         // ---- FILTER USING STREAM API ----
+        // stream() converts list into a processing pipeline
         List<Bogie> filteredBogies = bogies.stream()
+                // filter() keeps only bogies matching condition
                 .filter(b -> b.capacity > 70) //setting custom value -> i.e)70
+                // collect() converts stream back into list
                 .collect(Collectors.toList());
 
         // Display filtered bogies
