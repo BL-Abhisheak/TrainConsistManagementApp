@@ -27,7 +27,7 @@ public class UseCase3TrainConsistMgmnt {
 
     public static void main() {
         System.out.println("=======================================");
-        System.out.println(" UC2 - Add Passenger Bogies to Train ");
+        System.out.println(" UC3 - Track Unique Bogie IDs ");
         System.out.println("=======================================\n");
 
         // Create a Set to store unique bogie IDs
