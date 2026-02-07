@@ -2,10 +2,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * UC1: Initialize Train and Display Consist Summary
- * -----------------------------------------------
- * This class represents the entry point of the Train Consist Management App.
- * It initializes the train with no bogies and displays the initial state.
+ * =========================================================
+ * MAIN CLASS – UseCase1TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 1: Initialize Train and Display Consist Summary
+ *
+ * Description:
+ * This class represents the entry point of the Train Consist
+ * Management Application.
+ *
+ * At this stage, the application:
+ * - Creates an empty train consist
+ * - Uses a dynamic List to store bogies
+ * - Displays initial bogie count
+ * - Prints the current state of the train
+ *
+ * This use case introduces collection initialization and
+ * basic program startup flow.
+ *
+ * @author Developer
+ * @version 1.0
  */
 public class UseCase1TrainConsistMgmnt {
     /**
@@ -19,11 +36,13 @@ public class UseCase1TrainConsistMgmnt {
         System.out.println("   === Train Consist Management App === ");
         System.out.println("=======================================\n");
 
-        // Initialize an empty list to hold bogies dynamically
+        // Create a dynamic list to store train bogies
         List<String> trainConsist = new ArrayList<>();
 
         // Display initial consist information
         System.out.println("Train initialized successfully...");
+
+        // size() returns how many bogies are currently attached
         System.out.println("Initial Bogie Count : " + trainConsist.size());
 
         // Display consist summary
