@@ -2,10 +2,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * UC2: Add Passenger Bogies to Train (ArrayList Operations)
- * ---------------------------------------------------------
- * This use case demonstrates how passenger bogies can be added,
- * removed, and inspected dynamically using ArrayList operations.
+ * =========================================================
+ * MAIN CLASS – UseCase2TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 2: Add Passenger Bogies to Train
+ *
+ * Description:
+ * This class demonstrates how passenger bogies can be
+ * managed dynamically using ArrayList operations.
+ *
+ * At this stage, the application:
+ * - Adds new bogies to the train
+ * - Removes existing bogies
+ * - Checks for bogie availability
+ * - Displays the final consist
+ *
+ * This maps CRUD operations using ArrayList.
+ *
+ * @author Developer
+ * @version 2.0
  */
 public class UseCase2TrainConsistMgmnt {
     public static void main(String[] args) {
@@ -18,6 +34,7 @@ public class UseCase2TrainConsistMgmnt {
         List<String> passengerBogies = new ArrayList<>();
 
         // ---- CREATE (Add bogies) ----
+        // add() attaches a new bogie to the train
         passengerBogies.add("Sleeper");
         passengerBogies.add("AC Chair");
         passengerBogies.add("First Class");
@@ -26,12 +43,14 @@ public class UseCase2TrainConsistMgmnt {
         System.out.println("Passenger Bogies : " + passengerBogies);
 
         // ---- DELETE (Remove a bogie) ----
+        // remove() detaches a bogie from the list
         passengerBogies.remove("AC Chair");
 
         System.out.println("\nAfter Removing 'AC Chair':");
         System.out.println("Passenger Bogies : " + passengerBogies);
 
         // ---- READ (Check existence) ----
+        // contains() checks whether a bogie exists in the train
         boolean hasSleeper = passengerBogies.contains("Sleeper");
 
         System.out.println("\nChecking if 'Sleeper' exists:");
