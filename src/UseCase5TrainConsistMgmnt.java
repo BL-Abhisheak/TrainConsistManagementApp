@@ -3,10 +3,26 @@ import java.util.Set;
 
 
 /**
- * UC5: Preserve Insertion Order of Bogies (LinkedHashSet)
- * ------------------------------------------------------
- * This use case maintains the exact attachment order of bogies
- * while ensuring no duplicate bogies are added into the train formation.
+ * =========================================================
+ * MAIN CLASS – UseCase5TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 5: Preserve Insertion Order of Bogies
+ *
+ * Description:
+ * This class maintains the exact attachment order of bogies
+ * while also preventing duplicate entries using LinkedHashSet.
+ *
+ * At this stage, the application:
+ * - Attaches bogies in order
+ * - Preserves insertion sequence
+ * - Avoids duplicate bogies
+ * - Displays final train formation
+ *
+ * This maps ordered uniqueness using LinkedHashSet.
+ *
+ * @author Developer
+ * @version 5.0
  */
 
 public class UseCase5TrainConsistMgmnt {
@@ -17,20 +33,21 @@ public class UseCase5TrainConsistMgmnt {
         System.out.println(" UC5 - Preserve Insertion Order of Bogies ");
         System.out.println("=========================================\n");
 
-        // Create LinkedHashSet to maintain order + uniqueness
+        // LinkedHashSet preserves order and ensures uniqueness
         Set<String> formation = new LinkedHashSet<>();
 
-        // ---- Attach bogies ----
+        // add() attaches bogies to the formation
         formation.add("Engine");
         formation.add("Sleeper");
         formation.add("Cargo");
         formation.add("Guard");
 
-        // ---- Try to attach duplicate ----
+        // Duplicate bogie will not be added again
         formation.add("Sleeper"); // duplicate intentionally
 
-        // ---- Display final formation ----
+
         System.out.println("Final Train Formation:");
+        // Prints ordered and unique train formation
         System.out.println(formation);
 
         System.out.println("\nNote:");
