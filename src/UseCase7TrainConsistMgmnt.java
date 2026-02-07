@@ -3,11 +3,29 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * UC7: Sort Bogies by Capacity (Comparator)
- * ----------------------------------------
- * This use case sorts passenger bogies based on seating capacity
- * using a custom Comparator.
+ * =========================================================
+ * MAIN CLASS – UseCase7TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 7: Sort Bogies by Capacity (Comparator)
+ *
+ * Description:
+ * This class sorts passenger bogies based on seating
+ * capacity using a custom Comparator.
+ *
+ * At this stage, the application:
+ * - Creates bogie objects
+ * - Stores them in a list
+ * - Displays unsorted data
+ * - Sorts using Comparator logic
+ * - Displays sorted result
+ *
+ * This maps custom ordering using Comparator.
+ *
+ * @author Developer
+ * @version 7.0
  */
+
 public class UseCase7TrainConsistMgmnt {
 
     // Inner Bogie class to model passenger bogies
@@ -41,7 +59,7 @@ public class UseCase7TrainConsistMgmnt {
             System.out.println(b.name + " -> " + b.capacity);
         }
 
-        // ---- SORT USING COMPARATOR ----
+        //Comparator.comparingInt sorts based on capacity field
         bogies.sort(Comparator.comparingInt(b -> b.capacity));
 
         // Display after sorting
