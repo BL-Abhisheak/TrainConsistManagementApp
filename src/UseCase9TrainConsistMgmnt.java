@@ -4,11 +4,29 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * UC9: Group Bogies by Type (Collectors.groupingBy)
- * ------------------------------------------------
- * This use case groups bogies into categories using
+ * =========================================================
+ * MAIN CLASS – UseCase9TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 9: Group Bogies by Type
+ *
+ * Description:
+ * This class groups similar bogies together using
  * Java Stream Collectors.groupingBy().
+ *
+ * At this stage, the application:
+ * - Creates a list of bogies
+ * - Streams the list
+ * - Groups bogies by name
+ * - Stores grouped data in a Map
+ * - Displays grouped structure
+ *
+ * This maps classification logic using groupingBy.
+ *
+ * @author Developer
+ * @version 9.0
  */
+
 public class UseCase9TrainConsistMgmnt {
 
     // Reusing Bogie model from UC7 / UC8
