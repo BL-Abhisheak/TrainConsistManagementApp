@@ -3,11 +3,26 @@ import java.util.List;
 
 
 /**
- * UC4: Maintain Ordered Bogie Consist (LinkedList Operations)
- * ----------------------------------------------------------
- * This use case models the physical chaining of train bogies.
- * It demonstrates insertion and removal at different positions
- * using a LinkedList.
+ * =========================================================
+ * MAIN CLASS – UseCase4TrainConsistMgmnt
+ * =========================================================
+ *
+ * Use Case 4: Maintain Ordered Bogie Consist
+ *
+ * Description:
+ * This class models the physical chaining of train bogies
+ * using LinkedList for ordered operations.
+ *
+ * At this stage, the application:
+ * - Adds bogies in sequence
+ * - Inserts bogies at specific positions
+ * - Removes bogies from front and rear
+ * - Displays updated train structure
+ *
+ * This maps positional operations using LinkedList.
+ *
+ * @author Developer
+ * @version 4.0
  */
 
 public class UseCase4TrainConsistMgmnt {
@@ -18,10 +33,11 @@ public class UseCase4TrainConsistMgmnt {
         System.out.println(" UC4 - Maintain Ordered Bogie Consist ");
         System.out.println("=======================================\n");
 
-        // Create a LinkedList to represent ordered train consist
+        // Create a LinkedList
+        // LinkedList maintains insertion order and allows fast inserts
         List<String> trainConsist = new LinkedList<>();
 
-        // ---- ADD bogies in sequence ----
+        // add() attaches bogies sequentially
         trainConsist.add("Engine");
         trainConsist.add("Sleeper");
         trainConsist.add("AC");
@@ -31,15 +47,16 @@ public class UseCase4TrainConsistMgmnt {
         System.out.println("Initial Train Consist:");
         System.out.println(trainConsist);
 
-        // ---- INSERT in the middle ----
+        // add(index, value) inserts a bogie at a specific position
         trainConsist.add(2, "Pantry Car");
 
         System.out.println("\nAfter Inserting 'Pantry Car' at position 2:");
         System.out.println(trainConsist);
 
-        // ---- REMOVE from front and end ----
-        trainConsist.remove(0); // remove first
-        trainConsist.remove(trainConsist.size() - 1); // remove last
+        // remove(0) removes the first bogie
+        trainConsist.remove(0);
+        // remove(size-1) removes the last bogie
+        trainConsist.remove(trainConsist.size() - 1);
 
         System.out.println("\nAfter Removing First and Last Bogie:");
         System.out.println(trainConsist);
